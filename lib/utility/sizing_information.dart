@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive/utility/device_type.dart';
+import './device_type.dart';
 
 class SizingInformation {
   final Orientation orientation;

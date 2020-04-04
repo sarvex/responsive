@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive/utility/device_type.dart';
-import 'package:responsive/utility/sizing_information.dart';
+import './device_type.dart';
+import './sizing_information.dart';
 
 class ResponsiveWidget extends StatelessWidget {
   final Widget Function(BuildContext context, SizingInformation sizingInformation) builder;
