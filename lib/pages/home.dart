@@ -1,4 +1,6 @@
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
@@ -8,13 +10,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int currentIndex = 0;
+  int _currentIndex = 0;
   Choice _selectedChoice = choices[0];
+  PageController _pageController;
 
   void _select(Choice choice) {
     setState(() {
       _selectedChoice = choice;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   @override
@@ -54,9 +69,42 @@ class _HomePageState extends State<HomePage> {
         child: ChoiceCard(choice: _selectedChoice),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: Icon(FontAwesomeIcons.shoppingBasket),
         backgroundColor: Theme.of(context).accentColor,
         onPressed: () {},
+      ),
+      bottomNavigationBar: BottomNavyBar(
+        selectedIndex: _currentIndex,
+        onItemSelected: (index) {
+          setState(() => _currentIndex = index);
+//          _pageController.jumpToPage(index);
+        },
+        items: <BottomNavyBarItem>[
+          BottomNavyBarItem(
+            title: Text('HOME'),
+            icon: Icon(FontAwesomeIcons.heartbeat),
+            activeColor: Theme.of(context).accentColor,
+            textAlign: TextAlign.right,
+          ),
+          BottomNavyBarItem(
+            title: Text('DETAILS'),
+            icon: Icon(FontAwesomeIcons.bullhorn),
+            activeColor: Theme.of(context).accentColor,
+            textAlign: TextAlign.right,
+          ),
+          BottomNavyBarItem(
+            title: Text('FAQs'),
+            icon: Icon(FontAwesomeIcons.question),
+            activeColor: Theme.of(context).accentColor,
+            textAlign: TextAlign.right,
+          ),
+          BottomNavyBarItem(
+            title: Text('CALL'),
+            icon: Icon(FontAwesomeIcons.phone),
+            activeColor: Theme.of(context).accentColor,
+            textAlign: TextAlign.right,
+          ),
+        ],
       ),
     );
   }
