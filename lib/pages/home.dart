@@ -1,7 +1,4 @@
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
-
-import '../utility/responsive_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
@@ -15,7 +12,6 @@ class _HomePageState extends State<HomePage> {
   Choice _selectedChoice = choices[0];
 
   void _select(Choice choice) {
-    // Causes the app to rebuild with the new _selectedChoice.
     setState(() {
       _selectedChoice = choice;
     });
@@ -25,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Basic AppBar'),
+        title: const Text('Toffee'),
         actions: <Widget>[
           // action button
           IconButton(
@@ -34,14 +30,12 @@ class _HomePageState extends State<HomePage> {
               _select(choices[0]);
             },
           ),
-          // action button
           IconButton(
             icon: Icon(choices[1].icon),
             onPressed: () {
               _select(choices[1]);
             },
           ),
-          // overflow menu
           PopupMenuButton<Choice>(
             onSelected: _select,
             itemBuilder: (BuildContext context) {
@@ -63,43 +57,6 @@ class _HomePageState extends State<HomePage> {
         child: Icon(Icons.add),
         backgroundColor: Theme.of(context).accentColor,
         onPressed: () {},
-      ),
-      bottomNavigationBar: BottomNavyBar(
-        selectedIndex: currentIndex,
-        showElevation: true,
-        itemCornerRadius: 8,
-        curve: Curves.easeInBack,
-        onItemSelected: (index) => setState(() {
-          currentIndex = index;
-        }),
-        items: [
-          BottomNavyBarItem(
-            icon: Icon(Icons.apps),
-            title: Text('Home'),
-            activeColor: Colors.red,
-            textAlign: TextAlign.center,
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.people),
-            title: Text('Users'),
-            activeColor: Colors.purpleAccent,
-            textAlign: TextAlign.center,
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.message),
-            title: Text(
-              'Messages test for mes teset test test ',
-            ),
-            activeColor: Colors.pink,
-            textAlign: TextAlign.center,
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.settings),
-            title: Text('Settings'),
-            activeColor: Colors.blue,
-            textAlign: TextAlign.center,
-          ),
-        ],
       ),
     );
   }

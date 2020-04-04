@@ -40,3 +40,5 @@ flutter:
 
   assets:
     - google_fonts/
+    - assets/langs/en-US.json
+    - assets/langs/hi-IN.json
