@@ -1,14 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:toffee/utility/responsive_widget.dart';
 
-class SupportPage extends StatefulWidget {
+class SupportPage extends ResponsiveWidget {
   const SupportPage({Key key}) : super(key: key);
 
-  @override
-  _SupportPageState createState() => _SupportPageState();
-}
-
-class _SupportPageState extends State<SupportPage> {
   @override
   Widget build(BuildContext context) => Padding(
         padding: EdgeInsets.all(16.0),
