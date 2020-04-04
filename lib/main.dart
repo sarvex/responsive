@@ -25,8 +25,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: EasyLocalization.of(context).supportedLocales,
       locale: EasyLocalization.of(context).locale,
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-        accentColor: Colors.deepOrange,
+        primarySwatch: Colors.deepOrange,
         textTheme: GoogleFonts.montserratTextTheme(
           Theme.of(context).textTheme,
         ),
