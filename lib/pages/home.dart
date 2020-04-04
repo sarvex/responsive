@@ -23,88 +23,84 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveWidget(
-      builder: (context, sizingInformation) {
-        return Scaffold(
-          appBar: AppBar(
-            title: const Text('Basic AppBar'),
-            actions: <Widget>[
-              // action button
-              IconButton(
-                icon: Icon(choices[0].icon),
-                onPressed: () {
-                  _select(choices[0]);
-                },
-              ),
-              // action button
-              IconButton(
-                icon: Icon(choices[1].icon),
-                onPressed: () {
-                  _select(choices[1]);
-                },
-              ),
-              // overflow menu
-              PopupMenuButton<Choice>(
-                onSelected: _select,
-                itemBuilder: (BuildContext context) {
-                  return choices.skip(2).map((Choice choice) {
-                    return PopupMenuItem<Choice>(
-                      value: choice,
-                      child: Text(choice.title),
-                    );
-                  }).toList();
-                },
-              ),
-            ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Basic AppBar'),
+        actions: <Widget>[
+          // action button
+          IconButton(
+            icon: Icon(choices[0].icon),
+            onPressed: () {
+              _select(choices[0]);
+            },
           ),
-          body: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: ChoiceCard(choice: _selectedChoice),
+          // action button
+          IconButton(
+            icon: Icon(choices[1].icon),
+            onPressed: () {
+              _select(choices[1]);
+            },
           ),
-          floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add),
-            backgroundColor: Theme.of(context).accentColor,
-            onPressed: () {},
+          // overflow menu
+          PopupMenuButton<Choice>(
+            onSelected: _select,
+            itemBuilder: (BuildContext context) {
+              return choices.skip(2).map((Choice choice) {
+                return PopupMenuItem<Choice>(
+                  value: choice,
+                  child: Text(choice.title),
+                );
+              }).toList();
+            },
           ),
-          bottomNavigationBar: BottomNavyBar(
-            selectedIndex: currentIndex,
-            showElevation: true,
-            itemCornerRadius: 8,
-            curve: Curves.easeInBack,
-            onItemSelected: (index) => setState(() {
-              currentIndex = index;
-            }),
-            items: [
-              BottomNavyBarItem(
-                icon: Icon(Icons.apps),
-                title: Text('Home'),
-                activeColor: Colors.red,
-                textAlign: TextAlign.center,
-              ),
-              BottomNavyBarItem(
-                icon: Icon(Icons.people),
-                title: Text('Users'),
-                activeColor: Colors.purpleAccent,
-                textAlign: TextAlign.center,
-              ),
-              BottomNavyBarItem(
-                icon: Icon(Icons.message),
-                title: Text(
-                  'Messages test for mes teset test test ',
-                ),
-                activeColor: Colors.pink,
-                textAlign: TextAlign.center,
-              ),
-              BottomNavyBarItem(
-                icon: Icon(Icons.settings),
-                title: Text('Settings'),
-                activeColor: Colors.blue,
-                textAlign: TextAlign.center,
-              ),
-            ],
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ChoiceCard(choice: _selectedChoice),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        backgroundColor: Theme.of(context).accentColor,
+        onPressed: () {},
+      ),
+      bottomNavigationBar: BottomNavyBar(
+        selectedIndex: currentIndex,
+        showElevation: true,
+        itemCornerRadius: 8,
+        curve: Curves.easeInBack,
+        onItemSelected: (index) => setState(() {
+          currentIndex = index;
+        }),
+        items: [
+          BottomNavyBarItem(
+            icon: Icon(Icons.apps),
+            title: Text('Home'),
+            activeColor: Colors.red,
+            textAlign: TextAlign.center,
           ),
-        );
-      },
+          BottomNavyBarItem(
+            icon: Icon(Icons.people),
+            title: Text('Users'),
+            activeColor: Colors.purpleAccent,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.message),
+            title: Text(
+              'Messages test for mes teset test test ',
+            ),
+            activeColor: Colors.pink,
+            textAlign: TextAlign.center,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Icons.settings),
+            title: Text('Settings'),
+            activeColor: Colors.blue,
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
     );
   }
 }
