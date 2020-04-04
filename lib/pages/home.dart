@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
         selectedIndex: _currentIndex,
         onItemSelected: (index) {
           setState(() => _currentIndex = index);
-//          _pageController.jumpToPage(index);
+          _pageController.jumpToPage(index);
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
