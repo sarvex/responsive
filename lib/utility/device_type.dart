@@ -13,7 +13,7 @@ DeviceType getDeviceType(MediaQueryData mediaQuery) {
   debugPrint('$deviceWidth');
   if (deviceWidth > 1400) { 
     return DeviceType.Screen;
-  } else if (deviceWidth > 1024) {
+  } else if (deviceWidth > 900) {
     return DeviceType.Desktop;
   } else {
     return DeviceType.Mobile;

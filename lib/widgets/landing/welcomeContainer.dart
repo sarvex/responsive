@@ -133,8 +133,7 @@ class DesktopWelcomeContainer extends StatelessWidget {
                             child: Image.asset(
                               Images.family_group,
                               width: MediaQuery.of(context).size.width * .44,
-                              // height: MediaQuery.of(context).size.height*.65,
-                              fit: BoxFit.fill,
+                              fit: BoxFit.cover,
                             )),
                       ],
                     )
@@ -246,12 +245,6 @@ class MobileWelcomeContainer extends StatelessWidget {
                                             letterSpacing: .23,
                                             color: Color(0xff2f394a),
                                             fontWeight: FontWeight.bold),
-                                    //  TextStyle(
-                                    //     fontSize: 14,
-                                    //     height: 2,
-                                    //     letterSpacing: .23,
-                                    //     color: Color(0xff2f394a),
-                                    //     fontWeight: FontWeight.bold)
                                   ),
                                   SizedBox(
                                     width: 16,
