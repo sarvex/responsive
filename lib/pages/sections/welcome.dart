@@ -25,7 +25,7 @@ class DesktopWelcomeContainer extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Image.asset(
-            Images.welcome,
+            Images.rectangle,
             fit: BoxFit.fill,
           ),
           Container(
