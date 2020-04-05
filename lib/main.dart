@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.montserratTextTheme(
           Theme.of(context).textTheme,
         ),
+        fontFamily: 'Montserrat'
       ),
       initialRoute: '/',
       routes: {

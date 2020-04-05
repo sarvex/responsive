@@ -14,8 +14,8 @@ class ResponsiveWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context);
-    
-    return LayoutBuilder(
+
+     return LayoutBuilder(
       builder: (context, boxContraints) {
         var sizingInformation = SizingInformation(
           orientation: mediaQuery.orientation,
@@ -36,9 +36,11 @@ class ResponsiveWidget extends StatelessWidget {
             return screen;
             break;
           default: 
-            return mobile;
+            return desktop;
+            break;
         } 
       },
     );
+
   }
 }
