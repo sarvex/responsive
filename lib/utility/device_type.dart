@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 enum DeviceType {
-  Watch,
   Mobile, 
-  Tablet, 
   Desktop,
   Screen,
 }
@@ -17,11 +15,7 @@ DeviceType getDeviceType(MediaQueryData mediaQuery) {
     return DeviceType.Screen;
   } else if (deviceWidth > 950) {
     return DeviceType.Desktop;
-  } else if (deviceWidth > 600) {
-    return DeviceType.Tablet;
-  } else if (deviceWidth > 240) {
-    return DeviceType.Mobile;
   } else {
-    return DeviceType.Watch;
-  }
+    return DeviceType.Mobile;
+  } 
 } 

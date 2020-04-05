@@ -5,12 +5,11 @@ import './sizing_information.dart';
 import 'device_type.dart';
 
 class ResponsiveWidget extends StatelessWidget {
-    final Widget screen;
+  final Widget screen;
   final Widget desktop;
-  final Widget tablet;
   final Widget mobile;
   // final Widget Function(BuildContext context, SizingInformation sizingInformation) builder;
-  const ResponsiveWidget({Key key, this.screen, this.desktop, this.tablet, this.mobile}) : super(key: key);
+  const ResponsiveWidget({Key key, this.screen, this.desktop,  this.mobile}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +26,8 @@ class ResponsiveWidget extends StatelessWidget {
         debugPrint('$sizingInformation');
 
         switch(getDeviceType(mediaQuery)) {
-          case DeviceType.Watch:
-            return null;
-            break;
           case DeviceType.Mobile:
             return mobile;
-            break;
-          case DeviceType.Tablet:
-            return tablet;
             break;
           case DeviceType.Desktop:
             return desktop;
@@ -43,7 +36,7 @@ class ResponsiveWidget extends StatelessWidget {
             return screen;
             break;
           default: 
-            return desktop;
+            return mobile;
         } 
       },
     );

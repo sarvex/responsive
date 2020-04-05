@@ -12,7 +12,6 @@ class WelcomeContainer extends StatelessWidget {
     return ResponsiveWidget(
       screen: MobileWelcomeContainer(),
       desktop: MobileWelcomeContainer(),
-      tablet: MobileWelcomeContainer(),
       mobile: MobileWelcomeContainer(),
     );
   }
