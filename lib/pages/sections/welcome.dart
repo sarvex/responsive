@@ -35,11 +35,10 @@ class DesktopWelcomeContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                    child: Image.asset(
-                  Images.logo,
-                  height: 75,
-                  width: 119,
-                )),
+                  child: Image.asset(
+                    Images.logo,
+                  ),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,84 +49,89 @@ class DesktopWelcomeContainer extends StatelessWidget {
                         // margin: EdgeInsetsDirectional.only(
                         //     top: MediaQuery.of(context).size.height * 0.2),
                         child: Padding(
-                          padding: EdgeInsets.only(top: 35),
-                          child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsetsDirectional.only(bottom: 8),
-                              child: Text(
-                                'The all-in-one insurance plan for everyone',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline4
-                                    .copyWith(
-                                        color: Color(0xff2f394a),
-                                        fontWeight: FontWeight.bold,
-                                        letterSpacing: 0.8,
-                                        fontSize: 40),
-                                textAlign: TextAlign.left,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                   right: 10, top: 22),
-                              child: RichText(
-                                softWrap: true,
-                                textAlign: TextAlign.left,
-                                text: TextSpan(
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .subtitle2
-                                      .copyWith(
-                                          height: 2.13,
-                                          fontSize: 16,
-                                          color: Color(0xff2f394a)),
-                                  children: <TextSpan>[
-                                    TextSpan(
-                                      text:
-                                          'Your most important insurance needs are met with a single Toffee insurance plan. Get all the convenience of',
-                                    ),
-                                    TextSpan(
-                                        text:
-                                            ' health insurance, life insurance and insurance for your household',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold)),
-                                    TextSpan(text: ' in just one combo-plan.'),
-                                    TextSpan(
-                                        text: ' Easy as A-B-C!',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold))
-                                  ],
+                            padding: EdgeInsets.only(top: 35),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Padding(
+                                  padding:
+                                      EdgeInsetsDirectional.only(bottom: 8),
+                                  child: Text(
+                                    'The all-in-one insurance plan for everyone',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline4
+                                        .copyWith(
+                                            color: Color(0xff2f394a),
+                                            fontWeight: FontWeight.bold,
+                                            letterSpacing: 0.8,
+                                            fontSize: 40),
+                                    textAlign: TextAlign.left,
+                                  ),
                                 ),
-                              ),
-                            ),
-                            SizedBox(height: 22,),
-                            RaisedButton(
-                              hoverColor: Color(0xffc44848),
-                              color: Color(0xffff585d),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              padding:
-                                  const EdgeInsets.fromLTRB(28, 14, 28, 14),
-                              textColor: Colors.white,
-                              onPressed: () => {},
-                              child: Text(
-                                "SEE PLANS",
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    height: 1.36,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.2),
-                              ),
-                            )
-                          ],
-                        ))),
+                                Padding(
+                                  padding: EdgeInsets.only(right: 10, top: 22),
+                                  child: RichText(
+                                    softWrap: true,
+                                    textAlign: TextAlign.left,
+                                    text: TextSpan(
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .subtitle2
+                                          .copyWith(
+                                              height: 2.13,
+                                              fontSize: 16,
+                                              color: Color(0xff2f394a)),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                          text:
+                                              'Your most important insurance needs are met with a single Toffee insurance plan. Get all the convenience of',
+                                        ),
+                                        TextSpan(
+                                            text:
+                                                ' health insurance, life insurance and insurance for your household',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        TextSpan(
+                                            text: ' in just one combo-plan.'),
+                                        TextSpan(
+                                            text: ' Easy as A-B-C!',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold))
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 22,
+                                ),
+                                RaisedButton(
+                                  hoverColor: Color(0xffc44848),
+                                  color: Color(0xffff585d),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  padding:
+                                      const EdgeInsets.fromLTRB(28, 14, 28, 14),
+                                  textColor: Colors.white,
+                                  onPressed: () => {},
+                                  child: Text(
+                                    "SEE PLANS",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        height: 1.36,
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 1.2),
+                                  ),
+                                )
+                              ],
+                            ))),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        SizedBox(height: 1,),
+                        SizedBox(
+                          height: 1,
+                        ),
                         Container(
                             margin: EdgeInsets.only(top: 62),
                             child: Image.asset(

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:responsive_widgets/responsive_widgets.dart';
 import 'sections/welcome.dart';
+import 'sections/hero.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key key}) : super(key: key);
@@ -13,7 +14,7 @@ class LandingPage extends StatelessWidget {
         child: Container(
           constraints: BoxConstraints(maxWidth: 1440),
           child: ListView(
-            children: <Widget>[WelcomeContainer()],
+            children: <Widget>[HeroSection(), WelcomeContainer(), ],
           ),
         ),
       ),
