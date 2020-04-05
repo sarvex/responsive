@@ -11,9 +11,9 @@ DeviceType getDeviceType(MediaQueryData mediaQuery) {
 
   double deviceWidth = orientation == Orientation.landscape ? mediaQuery.size.width : mediaQuery.size.height;
   debugPrint('$deviceWidth');
-  if (deviceWidth > 1080) { 
+  if (deviceWidth > 1338) { 
     return DeviceType.Screen;
-  } else if (deviceWidth > 720) {
+  } else if (deviceWidth > 900) {
     return DeviceType.Desktop;
   } else {
     return DeviceType.Mobile;
