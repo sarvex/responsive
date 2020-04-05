@@ -160,6 +160,7 @@ class SingleProductWidget extends StatelessWidget {
         margin: EdgeInsets.only(bottom: 24),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Padding(
                 padding: EdgeInsets.only(
@@ -178,7 +179,7 @@ class SingleProductWidget extends StatelessWidget {
                   .textTheme
                   .subtitle2
                   .copyWith(height: 1.4, letterSpacing: 1.4, fontSize: 13),
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.center,
             )),
           ],
         ));

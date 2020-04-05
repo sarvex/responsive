@@ -181,7 +181,7 @@ class FamilyProductWidget extends StatelessWidget {
                   .textTheme
                   .subtitle2
                   .copyWith(height: 1.4, letterSpacing: 1.4, fontSize: 13),
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.center,
             )),
           ],
         ));
