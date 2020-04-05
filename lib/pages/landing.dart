@@ -10,8 +10,10 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
-            child: ListView(
-      children: <Widget>[WelcomeContainer()],
-    )));
+            child: Container(
+                constraints: BoxConstraints(maxWidth: 1440),
+                child: ListView(
+                  children: <Widget>[WelcomeContainer()],
+                ))));
   }
 }
