@@ -5,6 +5,8 @@ import './sizing_information.dart';
 import 'device_type.dart';
 
 class ResponsiveWidget extends StatelessWidget {
+
+
   final Widget screen;
   final Widget desktop;
   final Widget mobile;
@@ -26,15 +28,15 @@ class ResponsiveWidget extends StatelessWidget {
         debugPrint('$sizingInformation');
 
         switch(getDeviceType(mediaQuery)) {
-          case DeviceType.Mobile:
+          case DeviceType.Mobile: {
             return mobile;
-            break;
-          case DeviceType.Desktop:
+          } break;
+          case DeviceType.Desktop: {
             return desktop;
-            break;
-          case DeviceType.Screen:
+          }break;
+          case DeviceType.Screen: {
             return screen;
-            break;
+           } break;
           default: 
             return desktop;
             break;
