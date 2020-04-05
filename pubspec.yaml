@@ -42,8 +42,3 @@ flutter:
     - langs/en-US.json
     - langs/hi-IN.json
     - images/
-  
-fonts:
-    - family: Montserrat
-      fonts:
-        - asset: fonts/Montserrat-ExtraBold.ttf

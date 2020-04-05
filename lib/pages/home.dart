@@ -48,10 +48,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: LandingPage(),
-      ),
+      body: LandingPage(),
       floatingActionButton: FloatingActionButton(
         child: Icon(FontAwesomeIcons.shoppingBasket),
         backgroundColor: Theme.of(context).accentColor,
