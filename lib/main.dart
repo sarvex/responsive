@@ -18,7 +18,7 @@ void main() => runApp(
       EasyLocalization(
         child: MyApp(),
         supportedLocales: [Locale('en', 'US'), Locale('hi', 'IN')],
-        path: 'assets/langs',
+        path: 'langs',
       ),
     );
 
