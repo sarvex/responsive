@@ -6,4 +6,6 @@ class Images {
   static const covered = 'images/covered.png';
   static const ship = 'images/ship.png';
   static const days = 'images/days.png';
-}
+  static const family_toffee = 'images/family_toffee@3x.png';
+  static const single_toffee = 'images/single_toffee@3x.png';
+  }
