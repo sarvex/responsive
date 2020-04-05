@@ -41,13 +41,4 @@ flutter:
     - google_fonts/
     - langs/en-US.json
     - langs/hi-IN.json
-    - images/family.png
-    - images/family@2x.png
-    - images/family@3x.png
-    - images/logo.png
-    - images/logo@2x.png
-    - images/logo@3x.png
-    - images/reactangle.png
-    - images/reactangle@2x.png
-    - images/reactangle@3x.png
-
+    - images/

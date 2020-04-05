@@ -135,7 +135,7 @@ class DesktopWelcomeContainer extends StatelessWidget {
                         Container(
                             margin: EdgeInsets.only(top: 62),
                             child: Image.asset(
-                              Images.family_group,
+                              Images.family,
                               width: MediaQuery.of(context).size.width * .44,
                               fit: BoxFit.cover,
                             )),
@@ -174,7 +174,7 @@ class MobileWelcomeContainer extends StatelessWidget {
                 )),
                 Container(
                     child: Image.asset(
-                  Images.family_group,
+                  Images.family,
                   fit: BoxFit.fill,
                 )),
                 Container(
