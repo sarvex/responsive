@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:toffee/utility/assets.dart';
+import 'package:toffee/utility/device_type.dart';
 
 class SingleProductWidget extends StatelessWidget {
   const SingleProductWidget({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
+     final device = getDeviceType(mediaQuery);
     return Padding(
-              padding: EdgeInsets.only(right: 10, left: 10),
+              padding: device == DeviceType.Mobile ? EdgeInsets.only(right: 10, left: 10) : EdgeInsets.only(left: 10),
               child: Card(
-                color: Color(0xfff7fdfe),
+                color: Color(0xfffafafa),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
