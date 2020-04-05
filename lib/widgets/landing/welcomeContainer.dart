@@ -26,7 +26,7 @@ class MobileWelcomeContainer extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           SvgPicture.asset(
-            Assets.welcome,
+            Images.welcome,
             fit: BoxFit.cover,
             allowDrawingOutsideViewBox: true,
           ),
@@ -37,13 +37,13 @@ class MobileWelcomeContainer extends StatelessWidget {
               children: <Widget>[
                 Container(
                     child: Image.asset(
-                  Assets.logo,
+                  Images.logo,
                   height: 45,
                   width: 78,
                 )),
                 Container(
                     child: Image.asset(
-                  Assets.family_group,
+                  Images.family_group,
                   fit: BoxFit.cover,
                 )),
                 Container(
