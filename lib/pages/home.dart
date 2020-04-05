@@ -12,14 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
-  Choice _selectedChoice = choices[0];
   PageController _pageController;
-
-  void _select(Choice choice) {
-    setState(() {
-      _selectedChoice = choice;
-    });
-  }
 
   @override
   void initState() {
@@ -38,36 +31,25 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Toffee'),
+        leading: IconButton(
+          icon: Icon(Icons.apps),
+          onPressed: () {},
+        ),
         actions: <Widget>[
           // action button
           IconButton(
-            icon: Icon(choices[0].icon),
-            onPressed: () {
-              _select(choices[0]);
-            },
+            icon: Icon(Icons.call),
+            onPressed: () {},
           ),
           IconButton(
-            icon: Icon(choices[1].icon),
-            onPressed: () {
-              _select(choices[1]);
-            },
-          ),
-          PopupMenuButton<Choice>(
-            onSelected: _select,
-            itemBuilder: (BuildContext context) {
-              return choices.skip(2).map((Choice choice) {
-                return PopupMenuItem<Choice>(
-                  value: choice,
-                  child: Text(choice.title),
-                );
-              }).toList();
-            },
+            icon: Icon(Icons.notification_important),
+            onPressed: () {},
           ),
         ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: ChoiceCard(choice: _selectedChoice),
+        child: Card(),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(FontAwesomeIcons.shoppingBasket),
@@ -82,7 +64,7 @@ class _HomePageState extends State<HomePage> {
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-            title: Text('HOME'),
+            title: Text('LIFE'),
             icon: Icon(FontAwesomeIcons.heartbeat),
             activeColor: Theme.of(context).accentColor,
             textAlign: TextAlign.right,
@@ -106,46 +88,6 @@ class _HomePageState extends State<HomePage> {
             textAlign: TextAlign.right,
           ),
         ],
-      ),
-    );
-  }
-}
-
-class Choice {
-  const Choice({this.title, this.icon});
-
-  final String title;
-  final IconData icon;
-}
-
-const List<Choice> choices = const <Choice>[
-  const Choice(title: 'Car', icon: Icons.directions_car),
-  const Choice(title: 'Bicycle', icon: Icons.directions_bike),
-  const Choice(title: 'Boat', icon: Icons.directions_boat),
-  const Choice(title: 'Bus', icon: Icons.directions_bus),
-  const Choice(title: 'Train', icon: Icons.directions_railway),
-  const Choice(title: 'Walk', icon: Icons.directions_walk),
-];
-
-class ChoiceCard extends StatelessWidget {
-  const ChoiceCard({Key key, this.choice}) : super(key: key);
-
-  final Choice choice;
-
-  @override
-  Widget build(BuildContext context) {
-    final TextStyle textStyle = Theme.of(context).textTheme.headline4;
-    return Card(
-      color: Colors.white,
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Icon(choice.icon, size: 128.0, color: textStyle.color),
-            Text(choice.title, style: textStyle),
-          ],
-        ),
       ),
     );
   }
