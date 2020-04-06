@@ -136,8 +136,14 @@ class MobileProductContainer extends StatelessWidget {
                     ),
                   ],
                 )),
-            SingleProductWidget(),
-            FamilyProductWidget(),
+            Container(
+              constraints: BoxConstraints(maxWidth: 439),
+              child: SingleProductWidget(),
+            ),
+            Container(
+              constraints: BoxConstraints(maxWidth: 439),
+              child: FamilyProductWidget(),
+            ),
           ],
         ),
       ),

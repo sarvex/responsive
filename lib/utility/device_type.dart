@@ -8,8 +8,8 @@ enum DeviceType {
 
 DeviceType getDeviceType(MediaQueryData mediaQuery) {
   var orientation = mediaQuery.orientation;
-
-  double deviceWidth = orientation == Orientation.landscape ? mediaQuery.size.width : mediaQuery.size.height;
+  double deviceWidth = mediaQuery.size.width;
+  // double deviceWidth = orientation == Orientation.landscape ? mediaQuery.size.width : mediaQuery.size.height;
   debugPrint('$deviceWidth');
   if (deviceWidth > 1338) { 
     return DeviceType.Screen;

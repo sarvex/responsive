@@ -112,7 +112,7 @@ class SingleProductWidget extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(bottom: 32),
                             child: Text(
-                              'Family Plan Benefits',
+                              'Single Plan Benefits',
                               style: Theme.of(context)
                                   .textTheme
                                   .subtitle2
