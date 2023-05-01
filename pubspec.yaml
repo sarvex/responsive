@@ -18,7 +18,7 @@ dependencies:
   easy_localization: 2.3.3+1
   font_awesome_flutter: ^8.8.1
   fluro: ^1.6.2
-  flutter_inner_drawer: ^0.5.5
+  flutter_inner_drawer: ^1.0.0
   flutter_svg: ^0.23.0
   google_fonts: ^0.3.10
   image_picker: ^0.6.4
