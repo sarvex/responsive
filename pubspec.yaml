@@ -21,7 +21,7 @@ dependencies:
   flutter_inner_drawer: ^0.5.5
   flutter_svg: ^0.23.0
   google_fonts: ^4.0.0
-  image_picker: ^0.6.4
+  image_picker: ^0.8.0
   json_serializable: ^3.3.0
   provider: ^4.0.4
   responsive_widgets: ^2.0.1
