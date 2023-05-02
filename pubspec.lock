@@ -202,10 +202,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_inner_drawer
-      sha256: eb29fed9df7530e4133c0056c70bd403e34ce563e8fcab458d8ea341c6dac56a
+      sha256: "781df2087be0861dc31b64096593edc2b7adda4e7626e279718a81329f626443"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.5"
+    version: "1.0.0+1"
   flutter_localizations:
     dependency: "direct main"
     description: flutter
