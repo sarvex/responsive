@@ -15,7 +15,7 @@ dependencies:
   bottom_navy_bar: ^6.0.0
   carousel_slider: ^1.4.1
   cupertino_icons: ^1.0.0
-  easy_localization: 2.3.3+1
+  easy_localization: 3.0.2
   font_awesome_flutter: ^10.0.0
   fluro: ^1.6.2
   flutter_inner_drawer: ^1.0.0
